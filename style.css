@@ -532,3 +532,86 @@ button:hover {
   color: black;
   border-color: white;
 }
+
+/* =========================================
+   Big Circular Image Logo Styling
+   ========================================= */
+.nav-logo-img {
+  height: 60px; /* Makes it big */
+  width: 60px; /* Must match height for a perfect circle */
+  border-radius: 50%; /* This creates the circle */
+  object-fit: cover; /* Prevents the image from squishing or stretching */
+  display: block;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+
+  /* Optional: Adds a sleek gold ring around the circular logo */
+  border: 3px solid transparent;
+}
+
+/* Gives it a subtle lift and highlights the ring when hovered */
+.logo.hover-expand:hover .nav-logo-img {
+  transform: scale(1.08);
+  border-color: var(--accent);
+}
+
+/* Mobile Adjustment: Make it slightly smaller on phones so it doesn't break the menu */
+@media (max-width: 768px) {
+  .nav-logo-img {
+    height: 55px;
+    width: 55px;
+  }
+}
+
+/* Update the container to act as the frame */
+.hero-image {
+  /* This creates the space below the navigation bar. 
+     Adjust '60px' to match the actual height of your navbar. */
+  margin-top: 70px;
+
+  /* Setting width/height to auto or 100% causes it to fill its container,
+     not the whole screen. We'll use viewport units here too. */
+  width: 90vw; /* Keep it slightly narrower than the full screen */
+  height: 80vh; /* Keep it shorter than the full screen height */
+
+  margin-left: auto; /* Center it horizontally */
+  margin-right: auto;
+
+  overflow: hidden; /* Crucial for rounded corners on the image */
+
+  /* Apply the "completly full" border effects here: */
+  border: 4px solid #1a1a1a; /* Dark border */
+  border-radius: 12px; /* Smooth, rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Deep shadow for frame separation */
+  background: black; /* Fills gaps if the image aspect ratio doesn't match perfectly */
+}
+
+/* Ensure the image fills its frame exactly */
+.hero-image img {
+  display: block;
+  /* Instead of viewport units (vw/vh), use 100% of the PARENT (.hero-image) */
+  width: 100%;
+  height: 100%;
+
+  /* Maintains aspect ratio while covering the area. */
+  object-fit: cover;
+  object-position: center; /* Ensures the middle of the image is visible */
+}
+
+.grid-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* CRITICAL CHANGE: 'contain' stops the zooming and shows the whole image */
+  object-fit: contain;
+  object-position: center;
+
+  /* Optional: Adds a dark background behind the image in case 'contain' leaves empty space at the top/bottom */
+  background-color: #080808;
+
+  display: block;
+  transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1), filter 0.8s ease;
+  filter: grayscale(40%);
+}
