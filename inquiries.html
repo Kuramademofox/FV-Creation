@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inquiries | FV Creations</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+  </head>
+  <body>
+    <div class="ambient-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <nav class="glass-nav">
+      <a
+        href="index.html"
+        class="logo hover-expand"
+        style="text-decoration: none; color: inherit"
+        >FV<span>.</span></a
+      >
+      <div class="nav-links">
+        <a href="index.html" class="magnetic nav-link">Overview</a>
+        <a href="portfolio.html" class="magnetic nav-link">Portfolio</a>
+        <a href="vision.html" class="magnetic nav-link">Vision</a>
+        <a
+          href="inquiries.html"
+          class="magnetic nav-link"
+          style="color: var(--accent)"
+          >Inquiries</a
+        >
+      </div>
+    </nav>
+
+    <section
+      class="contact"
+      style="
+        padding-top: 150px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      "
+    >
+      <div class="glass-form reveal" style="margin-top: 0">
+        <h2>Initiate a Project</h2>
+        <p style="color: #888; margin-bottom: 30px; letter-spacing: 1px">
+          Tell me about your vision, timeline, and goals.
+        </p>
+
+        <form
+          onsubmit="event.preventDefault(); alert('Transmission Sent to FV Creations!'); this.reset();"
+        >
+          <div class="input-group">
+            <input
+              type="text"
+              required
+              placeholder="Your Name"
+              class="hover-expand"
+            />
+          </div>
+          <div class="input-group">
+            <input
+              type="email"
+              required
+              placeholder="Your Email"
+              class="hover-expand"
+            />
+          </div>
+          <div class="input-group">
+            <textarea
+              required
+              rows="5"
+              placeholder="Project Details..."
+              class="hover-expand"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="magnetic hover-expand"
+            style="width: 100%"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <div class="custom-cursor"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
