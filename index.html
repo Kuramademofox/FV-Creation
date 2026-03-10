@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FV Creations | Cinematic Visuals</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+  </head>
+  <body>
+    <div class="ambient-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <nav class="glass-nav">
+      <a
+        href="index.html"
+        class="logo hover-expand"
+        style="text-decoration: none; color: inherit"
+        >FV<span>.</span></a
+      >
+      <div class="nav-links">
+        <a href="index.html" class="magnetic nav-link">Overview</a>
+        <a href="portfolio.html" class="magnetic nav-link">Portfolio</a>
+        <a href="vision.html" class="magnetic nav-link">Vision</a>
+        <a href="inquiries.html" class="magnetic nav-link">Inquiries</a>
+      </div>
+    </nav>
+
+    <header class="hero" id="overview">
+      <div class="hero-content">
+        <h2 class="sub-heading reveal">AESTHETIC & UNIQUE</h2>
+        <h1 class="main-title reveal">FV CREATIONS</h1>
+        <a
+          href="#portfolio-preview"
+          class="scroll-indicator reveal hover-expand"
+          style="text-decoration: none; color: inherit; display: block"
+          >SCROLL TO EXPLORE</a
+        >
+      </div>
+      <div class="hero-image glass-panel hover-expand reveal-center">
+        <img
+          src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=1600&auto=format&fit=crop"
+          alt="FV Creations Showcase"
+        />
+      </div>
+    </header>
+
+    <section id="portfolio-preview" class="portfolio">
+      <div class="section-header reveal">
+        <h2>Selected Works</h2>
+        <p>Capturing the ephemeral.</p>
+      </div>
+
+      <div class="gallery-track">
+        <div class="grid-item reveal hover-expand">
+          <img
+            src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=800&auto=format&fit=crop"
+            alt="Photography"
+          />
+          <div class="item-overlay"><span>01. Details</span></div>
+        </div>
+        <div class="grid-item reveal hover-expand">
+          <img
+            src="https://images.unsplash.com/photo-1510166089176-b57564a5b28e?q=80&w=800&auto=format&fit=crop"
+            alt="Photography"
+          />
+          <div class="item-overlay"><span>02. Form</span></div>
+        </div>
+        <div class="grid-item reveal hover-expand">
+          <img
+            src="https://images.unsplash.com/photo-1506015391300-41521484075e?q=80&w=800&auto=format&fit=crop"
+            alt="Photography"
+          />
+          <div class="item-overlay"><span>03. Space</span></div>
+        </div>
+        <div class="grid-item reveal hover-expand">
+          <img
+            src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=800&auto=format&fit=crop"
+            alt="Photography"
+          />
+          <div class="item-overlay"><span>04. Light</span></div>
+        </div>
+      </div>
+
+      <div class="redirect-container reveal">
+        <a href="portfolio.html" class="redirect-btn magnetic hover-expand"
+          >View Full Archives</a
+        >
+      </div>
+    </section>
+
+    <section id="vision-preview" class="about">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2>The Studio</h2>
+          <p>
+            FV Creations is built on the intersection of technical precision and
+            raw aesthetics. Led by founder and visual artist Vinay, the studio
+            approaches every project as a unique problem to solve through the
+            lens.
+          </p>
+          <p>
+            We don't just take photos; we engineer visual narratives that
+            command attention.
+          </p>
+        </div>
+        <div class="about-image reveal glass-panel hover-expand">
+          <img
+            src="https://images.unsplash.com/photo-1516245834210-c4c142787335?q=80&w=800&auto=format&fit=crop"
+            alt="Vinay at Work"
+          />
+        </div>
+      </div>
+
+      <div class="redirect-container reveal" style="margin-top: 60px">
+        <a href="vision.html" class="redirect-btn magnetic hover-expand"
+          >Read Full Story</a
+        >
+      </div>
+    </section>
+
+    <section id="inquiries-preview" class="contact">
+      <div class="glass-form reveal">
+        <h2>Initiate a Project</h2>
+        <form
+          onsubmit="event.preventDefault(); alert('Transmission Sent to FV Creations!'); this.reset();"
+        >
+          <div class="input-group">
+            <input
+              type="text"
+              required
+              placeholder="Your Name"
+              class="hover-expand"
+            />
+          </div>
+          <div class="input-group">
+            <input
+              type="email"
+              required
+              placeholder="Your Email"
+              class="hover-expand"
+            />
+          </div>
+          <div class="input-group">
+            <textarea
+              required
+              rows="4"
+              placeholder="Tell us about your vision..."
+              class="hover-expand"
+            ></textarea>
+          </div>
+          <button type="submit" class="magnetic hover-expand">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <div class="custom-cursor"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
